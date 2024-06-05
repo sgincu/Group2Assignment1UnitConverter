@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet"> <!-- Link to custom styles -->
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-500 p-4">
+        <div class="container mx-auto flex justify-between">
+            <div class="text-white text-lg">Unit Converter</div>
+            <div>
+                <button id="weight-tab" class="text-white px-3 py-2">Weight</button>
+                <button id="distance-tab" class="text-white px-3 py-2">Distance</button>
+                <button id="temperature-tab" class="text-white px-3 py-2">Temperature</button>
+            </div>
+        </div>
+    </nav>
+    <div class="container mx-auto mt-4">
+        <!-- Weight Conversion Form -->
+        <div id="weight-form" class="hidden">
+            <h2 class="text-xl mb-4">Weight Conversion</h2>
+            <form id="weight-conversion-form" class="space-y-4">
+                <div>
+                    <label for="weight-input" class="block text-gray-700">Enter value(s) (comma-separated for multiple values):</label>
+                    <input type="text" id="weight-input" class="mt-1 p-2 block w-full border border-gray-300 rounded-md">
+                </div>
+                <div>
+                    <label for="weight-conversion-type" class="block text-gray-700">Conversion Type:</label>
+                    <select id="weight-conversion-type" class="mt-1 p-2 block w-full border border-gray-300 rounded-md">
+                        <option value="lbToKg">Pounds to Kilograms</option>
+                        <option value="kgToLb">Kilograms to Pounds</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="button" id="convert-weight" class="bg-blue-500 text-white p-2 rounded-md">Convert</button>
+                </div>
+                <div>
+                    <h3 class="text-lg text-gray-700">Result:</h3>
+                    <p id="weight-result" class="text-gray-800"></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Distance Conversion Form -->
+        <div id="distance-form" class="hidden">
+            <h2 class="text-xl mb-4">Distance Conversion</h2>
+            <form id="distance-conversion-form" class="space-y-4">
+                <div>
+                    <label for="distance-input" class="block text-gray-700">Enter value(s) (comma-separated for multiple values):</label>
+                    <input type="text" id="distance-input" class="mt-1 p-2 block w-full border border-gray-300 rounded-md">
+                </div>
+                <div>
+                    <label for="distance-conversion-type" class="block text-gray-700">Conversion Type:</label>
+                    <select id="distance-conversion-type" class="mt-1 p-2 block w-full border border-gray-300 rounded-md">
+                        <option value="milesToKm">Miles to Kilometers</option>
+                        <option value="kmToMiles">Kilometers to Miles</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="button" id="convert-distance" class="bg-blue-500 text-white p-2 rounded-md">Convert</button>
+                </div>
+                <div>
+                    <h3 class="text-lg text-gray-700">Result:</h3>
+                    <p id="distance-result" class="text-gray-800"></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Temperature Conversion Form -->
+        <div id="temperature-form" class="hidden">
+            <h2 class="text-xl mb-4">Temperature Conversion</h2>
+            <form id="temperature-conversion-form" class="space-y-4">
+                <div>
+                    <label for="temperature-input" class="block text-gray-700">Enter value(s) (comma-separated for multiple values):</label>
+                    <input type="text" id="temperature-input" class="mt-1 p-2 block w-full border border-gray-300 rounded-md">
+                </div>
+                <div>
+                    <label for="temperature-conversion-type" class="block text-gray-700">Conversion Type:</label>
+                    <select id="temperature-conversion-type" class="mt-1 p-2 block w-full border border-gray-300 rounded-md">
+                        <option value="cToF">Celsius to Fahrenheit</option>
+                        <option value="fToC">Fahrenheit to Celsius</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="button" id="convert-temperature" class="bg-blue-500 text-white p-2 rounded-md">Convert</button>
+                </div>
+                <div>
+                    <h3 class="text-lg text-gray-700">Result:</h3>
+                    <p id="temperature-result" class="text-gray-800"></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
